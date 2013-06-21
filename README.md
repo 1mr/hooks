@@ -1,4 +1,7 @@
-hooks
+git or svn hooks
 =====
+svn:
+- pre-commit hook to check js (node.js + jslint)
 
-svn or git hooks
+git
+- pre-recieve 
