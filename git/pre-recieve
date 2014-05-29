@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if ! [ -t 0 ]; then
+  read -a ref
+fi
+  
+IFS='/' read -ra REF <<< "${ref[2]}"
+branch="${REF[2]}"
+
+
+
+
+if [ $branch == "master" ]; then
+    if  [ $REMOTE_USER == "username" ]; then
+        exit
+    else
+        echo "Sorry. You don't have rights to commit in master branch"
+        exit 1
+    fi
+fi
